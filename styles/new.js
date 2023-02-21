@@ -54,11 +54,11 @@ export const WriterInfoInput = styled.input`
 export const BoardTitleWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    margin-bottom : 40px;
 `
 export const BoardTitleInput = styled.input`
     width: 100%;
     height: 52px;
-    margin-bottom : 40px;
     border: 1px solid #BDBDBD;
 `
 
@@ -77,6 +77,7 @@ export const BoardContentInput = styled.textarea`
 export const AddressWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    margin-bottom: 37px;
 `;
 
 export const AddressNumberSearchWrapper = styled.div`
@@ -109,6 +110,13 @@ export const AddressInfoInput = styled.input`
     width: 996px;
     height: 52px;
     margin-bottom: 37px;
+    border: 1px solid #BDBDBD;
+
+`;
+
+export const AddressInfoDetailInput = styled.input`
+    width: 996px;
+    height: 52px;
     border: 1px solid #BDBDBD;
 
 `;
@@ -202,6 +210,12 @@ export const SubmitButton = styled.button`
     font-size: 16px;
     margin-bottom: 100px;
     cursor: pointer;
+`;
+
+export const ErrorBox = styled.div`
+    margin-top: 10px;
+    color: red;
+    font-size: 12px;
 `;
 
 
