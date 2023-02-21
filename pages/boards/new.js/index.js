@@ -52,32 +52,68 @@ export default function NewBoardPage() {
     const [contentError, setContentError] = useState("");
     const [AddressError, setAddressError] = useState("");
 
-    function onChangeName(event) {
+    function onChangeWriter(event) {
         setWriter(event.target.value);
+
+        if (event.target.value !== "")
+            setWriterError("");
+        else
+            setWriterError("* 작성자를 입력해주세요.");
     }
 
     function onChangePassword(event) {
         setPassword(event.target.value);
+
+        if (event.target.value !== "")
+            setPasswordError("");
+        else
+            setPasswordError("* 비밀번호를 입력해주세요.");
     }
 
     function onChangeTitle(event) {
         setTitle(event.target.value);
+
+        if (event.target.value !== "")
+            setTitleError("");
+        else
+            setTitleError("* 제목을 입력해주세요.");
+
     }
 
     function onChangeContent(event) {
         setContent(event.target.value);
+
+        if (event.target.value !== "")
+            setContentError("");
+        else
+            setContentError("* 내용을 입력해주세요.");
     }
 
     function onChangeAddressNumber(event) {
         setAddressNumber(event.target.value);
+
+        if (event.target.value !== "" && address && addressDetail)
+            setAddressError("");
+        else
+            setAddressError("* 주소를 입력해주세요.");
     }
 
     function onChangeAddress(event) {
         setAddress(event.target.value);
+
+        if (event.target.value !== "" && addressNumber && addressDetail)
+            setAddressError("");
+        else
+            setAddressError("* 주소를 입력해주세요.");
     }
 
     function onChangeAddressDetail(event) {
         setAddressDetail(event.target.value);
+
+        if (event.target.value !== "" && addressNumber && address)
+            setAddressError("");
+        else
+            setAddressError("* 주소를 입력해주세요.");
     }
 
     function onChangeYoutube(event) {
@@ -138,7 +174,7 @@ export default function NewBoardPage() {
                 <WriterInfoWrapper>
                     <WriterNameWrapper>
                         <Label>작성자</Label>
-                        <WriterInfoInput type="text" placeholder='이름을 적어주세요.' onChange={onChangeName} />
+                        <WriterInfoInput type="text" placeholder='이름을 적어주세요.' onChange={onChangeWriter} />
                         <ErrorBox>{writerError}</ErrorBox>
                     </WriterNameWrapper>
 
